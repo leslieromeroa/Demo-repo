@@ -8,29 +8,30 @@
     <title>Mi Página Web</title>
     <style>
         body {
-            background-color: #063767; /* Color azul marino para el fondo de toda la página */
+            background-color: #1e528a; /* Color azul marino para el fondo de toda la página */
             color: white; 
             margin: 0; 
+
+            <P>P
         }
 
         .franja-azul {
-            background-color: #456280; 
+            background-color: #39657c; 
             color: white; 
             text-align: left; /* Cambiar a izquierda para alinear el texto */
             padding: 50px; 
             margin: 20px 0; 
             width: 100%; 
+            display: flex; /* Usar flexbox para alinear elementos */
+            align-items: center; /* Centrar verticalmente */
         }
 
         .imagen-circular {
-            width: 200px; /* Tamaño de la imagen (aumentado) */
-            height: 200px; /* Tamaño de la imagen (aumentado) */
-            border-radius: 50%; /* Hace que la imagen sea redonda */
-            border: 5px solid white; /* Borde blanco alrededor de la imagen */
+            width: 250px; /* Tamaño de la imagen (aumentado) */
+            height: 250px; /* Tamaño de la imagen (aumentado) */
+            border-radius: 1000%; /* Hace que la imagen sea redonda */
             margin-right: 20px; /* Espacio a la derecha de la imagen */
-            display: inline-block; /* Para alinearla con el texto */
-            vertical-align: middle; /* Alineación vertical */
-        }
+            margin-left: 300px; /* Espacio a la derecha de la imagen */
     </style>
 </head>
 
@@ -39,7 +40,7 @@
 
     <main>
         <section class="franja-azul">
-            <img src="" 
+            <img src="C:\Users\admin\Documents\HTML-CSS\Practica1\img\perro.jpg" 
                  alt="Descripción de la imagen" 
                  class="imagen-circular">
             <p>Hola soy Leslie, actualmente estudiante de ingeniería informática en Santander, esta es una presentación para que conozcas algo más sobre mí.</p>
