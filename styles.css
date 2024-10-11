@@ -28,69 +28,92 @@ body {
     border-radius: 1000%;
     margin-right: 30px;
     margin-left: 355px;
+    
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+    
+    
+
 }
 
 
 .franja-blanca {
     background-color: white;
     color: #1e528a;
-    padding: 165px;
+    padding: 180px;
     width: 100%;
     text-align: left;
+    margin-top: 50px;
+    margin-right: 80;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
+
+.stats {
+    display: grid;
+    gap: 20px;
+    width: 500px;
+}
+
+.stat-item {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+}
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd700;
+}
+.stat-label {
+    font-size: 14px;
+    color: #666;
 }
 
 
 .menu-navegacion {
-    position: absolute;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
     height: 37px;
     background-color: #133355;
-    width: 100%;
+    width: 100%; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-right: 20px; 
 }
 
 .menu-navegacion ul {
     list-style: none;
-   
     margin: 0;
-    
-    padding: 10;
-  
+    padding: 0;
     display: flex;
-    
     gap: 15px;
-    
     color: #dbdbdb;
-    text-align: right;
-    
 }
 
-.datos {
-    padding: 20px;
-    
-    border-radius: 0%px;
-    margin: 20px 0;
-
-
-}
 
 .contacto {
     display: flex;
-   
- 
-    text-justify: center;
-    display: flex
-
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+    text-align: center; 
+    margin-top: 20px
 }
-
-
 
 .div{
     font-size: 1.2em;
     position:absolute;
-    top: 50%;
-    left: 50%;
-    transform:auto
-       translate: (-50%, -50%)
+    
 
 
        .contacto p {
@@ -111,6 +134,15 @@ body {
             
         }
     
+        .footer {
+            background-color: #1c4966;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
     
     }
 
@@ -123,3 +155,11 @@ body {
 
 }
 
+.acerca-de-mi {
+    width: 500px;
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: space-between;
+}
