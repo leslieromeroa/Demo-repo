@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color:
+        #1f538a;
+    color: white;
+
+}
+
+.franja-azul {
+    background-color: #39657c;
+    color: white;
+    text-align: left;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.imagen-circular {
+    width: 253px;
+    height: 245px;
+    border-radius: 1000%;
+    margin-right: 30px;
+    margin-left: 355px;
+}
+
+
+.franja-blanca {
+    background-color: white;
+    color: #1e528a;
+    padding: 165px;
+    width: 100%;
+    text-align: left;
+
+}
+
+
+.menu-navegacion {
+    position: absolute;
+    height: 37px;
+    background-color: #133355;
+    width: 100%;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+   
+    margin: 0;
+    
+    padding: 10;
+  
+    display: flex;
+    
+    gap: 15px;
+    
+    color: #dbdbdb;
+    text-align: right;
+    
+}
+
+.datos {
+    padding: 20px;
+    
+    border-radius: 0%px;
+    margin: 20px 0;
+
+
+}
+
+.contacto {
+    display: flex;
+   
+ 
+    text-justify: center;
+    display: flex
+
+}
+
+
+
+.div{
+    font-size: 1.2em;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform:auto
+       translate: (-50%, -50%)
+
+
+       .contacto p {
+        margin: 0;
+        color: #dbdbdb;
+    
+    
+       
+    
+       
+        .presentacion-personal h1 {
+            font-size: 2.5em;
+            
+        }
+    
+        .presentacion-personal p {
+            font-size: 1.2em;
+            
+        }
+    
+    
+    }
+
+
+
+
+
+
+
+
+}
+
