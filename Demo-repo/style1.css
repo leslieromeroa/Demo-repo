@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color:
+        #1f538a;
+    color: white;
+
+}
+
+.franja-azul {
+    background-color: #39657c;
+    color: white;
+    text-align: left;
+    padding: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.imagen-circular {
+    width: 253px;
+    height: 245px;
+    border-radius: 1000%;
+    margin-right: 30px;
+    margin-left: 355px;
+    
+    img {
+        max-width: 100%; 
+        height: auto; 
+    }
+    
+    
+
+}
+
+
+.franja-blanca {
+    background-color: white;
+    color: #1e528a;
+    padding: 180px;
+    width: 100%;
+    text-align: left;
+    margin-top: 50px;
+    margin-right: 80;
+    text-align: left
+    diplay: flex
+
+}
+
+}
+.stats {
+    display: grid;
+    gap: 20px;
+    width: 40%;
+}
+.stat-item {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffd700;
+}
+.stat-label {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.menu-navegacion {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    height: 37px;
+    background-color: #133355;
+    width: 100%; 
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-right: 20px; 
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    color: #dbdbdb;
+}
+
+
+.contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+    text-align: center; 
+    margin-top: 20px
+}
+
+.div{
+    font-size: 1.2em;
+    position:absolute;
+    
+
+
+       .contacto p {
+        margin: 0;
+        color: #dbdbdb;
+    
+    
+       
+    
+       
+        .presentacion-personal h1 {
+            font-size: 2.5em;
+            
+        }
+    
+        .presentacion-personal p {
+            font-size: 1.2em;
+            
+        }
+    
+        .footer {
+            background-color: #1c4966;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        
+    
+    }
+
+
+
+
+
+
+
+
+}
