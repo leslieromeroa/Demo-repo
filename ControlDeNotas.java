@@ -5,6 +5,12 @@ public class controlDeNotas {
         
         Scanner entrada = new Scanner(System.in);
 
+        static String verificarAprobacion (double nota){
+            if (nota>= 5){
+                return "aprobado";
+            }else{
+                return "Suspendido";
+            }
         System.out.print("Introduce la nota del estudiante (0-10): ");
         double nota = entrada.nextDouble();
 
