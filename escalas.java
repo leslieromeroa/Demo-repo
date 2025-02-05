@@ -1,45 +1,79 @@
 import java.util.Scanner;
 
-public class escalasAcordes {
+public class EscalasAcordes {
+
+    private static final String[][] NOTAS = {
+        {"Do"}, {"Do#"}, {"Re"}, {"Re#"}, {"Mi"}, {"Fa"}, {"Fa#"},
+        {"Sol"}, {"Sol#"}, {"La"}, {"La#"}, {"Si"}
+    };
+
+    private static final int[] PATRON_ESCALA_MAYOR = {2, 2, 1, 2, 2, 2, 1};
 
     public static void main(String[] args) {
-        
         Scanner scanner = new Scanner(System.in);
 
-       
-        System.out.println("Ingrese la nota a trabajar: 1: Do, 2: Do#, 3: Re, 4: Re#, 5: Mi, 6: Fa, 7: Fa#, 8: Sol, 9: Sol#, 10: La, 11: La#, 12: Si");
-        int opcion = scanner.nextInt(); 
+        mostrarOpciones();
+        int indiceNota = leerOpcion(scanner) - 1;
 
-        String[] notas = {"Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"};
-        String[] tonosYSemitonos = {"T", "T", "S", "T", "T", "T", "S"}; 
+        String[] escalaMayor = elaborarEscalaMayor(indiceNota);
+        String[] acordeMayor = elaborarAcordeMayor(escalaMayor);
 
-        
-        int indexNotaBase = opcion - 1;  
-        StringBuilder escala = new StringBuilder();
-        int[] posiciones = new int[8];  
-        posiciones[0] = indexNotaBase;
+        mostrarResultados(NOTAS[indiceNota][0], escalaMayor, acordeMayor);
 
-        for (int i = 1; i < posiciones.length; i++) {
-            int siguientePos = (posiciones[i - 1] + (tonosYSemitonos[i - 1].equals("T") ? 2 : 1)) % 12;
-            posiciones[i] = siguientePos;
-        }
-
-
-        System.out.print("Ha elegido la nota " + notas[indexNotaBase] + "\nLa escala de " + notas[indexNotaBase] + " Mayor es: ");
-        for (int i = 0; i < posiciones.length; i++) {
-            escala.append("[").append(notas[posiciones[i]]).append("]");
-            if (i < posiciones.length - 1) {
-                escala.append(" / ");
-            }
-        }
-        System.out.println(escala.toString());
-
-        
-        String acorde = "[" + notas[posiciones[0]] + "] / [" + notas[(posiciones[0] + 4) % 12] + "] / [" + notas[(posiciones[0] + 7) % 12] + "]";
-        System.out.println("El acorde de " + notas[indexNotaBase] + " Mayor está conformado por: " + acorde);
-        
-        
         scanner.close();
     }
-}
 
+    private static void mostrarOpciones() {
+        System.out.println("Ingrese el número de la nota a evaluar:");
+        for (int i = 0; i < NOTAS.length; i++) {
+            System.out.println((i + 1) + ": " + NOTAS[i][0]);
+        }
+    }
+
+    private static int leerOpcion(Scanner scanner) {
+        int opcion = 1; 
+        while (opcion < 1 || opcion > NOTAS.length) {
+            System.out.print("\nElija el número de la nota (1-" + NOTAS.length + "): ");
+            if (scanner.hasNextInt()) {
+                opcion = scanner.nextInt();
+            } else {
+                System.out.println("Entrada inválida. Se seleccionará 'Do' por defecto.");
+                break; 
+            }
+            scanner.nextLine(); 
+        }
+        return opcion;
+    }
+
+    private static String[] elaborarEscalaMayor(int indiceNota) {
+        String[] escala = new String[8];
+        for (int i = 0; i < PATRON_ESCALA_MAYOR.length; i++) {
+            escala[i] = NOTAS[indiceNota][0];
+            indiceNota = (indiceNota + PATRON_ESCALA_MAYOR[i]) % NOTAS.length;
+        }
+        escala[7] = NOTAS[indiceNota][0]; 
+        return escala;
+    }
+
+    private static String[] elaborarAcordeMayor(String[] escalaMayor) {
+        return new String[]{escalaMayor[0], escalaMayor[2], escalaMayor[4]};
+    }
+
+    private static void mostrarResultados(String notaBase, String[] escalaMayor, String[] acordeMayor) {
+        System.out.println("Eligió la nota " + notaBase);
+        System.out.print("La escala de " + notaBase + " Mayor es: ");
+        mostrarNotas(escalaMayor);
+        System.out.print("El acorde de " + notaBase + " Mayor está conformado por: ");
+        mostrarNotas(acordeMayor);
+    }
+
+    private static void mostrarNotas(String[] notas) {
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("[" + notas[i] + "]");
+            if (i < notas.length - 1) {
+                System.out.print(" / ");
+            }
+        }
+        System.out.println();
+    }
+}
