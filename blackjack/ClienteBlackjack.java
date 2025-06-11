@@ -1,0 +1,6 @@
+public class ClienteBlackjack {
+    public static void main(String[] args) {
+        Blackjack juego = new Blackjack();
+        juego.jugar();
+    }
+}
